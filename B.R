@@ -69,6 +69,9 @@ modelo_nulo <- lm(Calificacion ~ 1, data = datos)
 step(modelo_nulo,
      scope = list(lower = modelo_nulo, upper = modelo_completo),
      direction = "forward")
+#forward:
+modelo_step <- ols_step_both_p(modelo_completo)
+ols_step_forward_p(modelo_completo)
 
 # 3. Stepwise (ambos):
 step(modelo_completo, direction = "both")
