@@ -79,4 +79,8 @@ str(datos)
 linearHypothesis(modelo_interaccion, "bodyStylesedan=0")
 linearHypothesis(modelo_interaccion, "bore:bodyStylesedan=bore:bodyStylewagon")
 
+df$genero <- as.factor(df$genero)
+df$gen<-factor(df$genero, levels= c("Otro", "Masculino", "Femenino"))
+
+
 
